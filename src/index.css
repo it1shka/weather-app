@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  box-sizing: border-box;
+  --main: rgb(53, 53, 53);
+  --light: rgb(231, 231, 231);
+  --primary: rgb(0, 94, 138);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::before, ::after, * {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--main);
+}
+
+.title-header {
+  margin: 0;
+  background-color: rgb(77, 77, 77);
+  color: var(--light);
+  font-weight: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(5em + 2.5vw);
+  padding: 0.35em;
+}
+
+.subtitle-header {
+  margin: 0;
+  background-color: var(--primary);
+  font-weight: initial;
+  text-align: center;
+  color: var(--light);
+  padding: 0.2em 0em;
+  font-size: calc(2em + 1.5vw);
+}
+
+.card {
+  max-width: 520px;
+  margin: 1em auto;
+}
+
+.card > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card > ul > li {
+  display: flex;
+  border-radius: 1em;
+  padding: 0em 1em;
+  transition: 0.3s all ease-in 0s;
+}
+
+.card > ul > li:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 0em 2em;
+  transform: scale(1.075);
+}
+
+.card > ul > li > p.right {
+  margin-left: auto;
+}
+
+.card button {
+ background-color: var(--primary);
+ color: var(--light);
+ border: none;
+ padding: 0.5em 0.75em;
+ font-weight: bold;
+ font-family: inherit;
+ border-radius: 2px;
+ margin: 1em;
+ transition: 0.1s all 0s;
+}
+
+.card button:hover {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  transform: translate(-0.25em, -0.25em);
 }
